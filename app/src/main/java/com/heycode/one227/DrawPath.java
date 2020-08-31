@@ -13,13 +13,11 @@ class DrawPath extends View {
     Paint paint;
     public DrawPath(Context context) {
         super(context);
-        init();
-    }
-    public void init(){
+
         path = new Path();
         paint = new Paint();
-        paint.setAntiAlias(true);
-        paint.setStrokeJoin(Paint.Join.ROUND);
+//        paint.setAntiAlias(true);
+//        paint.setStrokeJoin(Paint.Join.ROUND);
         paint.setColor(Color.RED);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(10f);
@@ -34,21 +32,23 @@ class DrawPath extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        float xPos = event.getX();
-        float yPos = event.getY();
-
         switch (event.getAction()){
             case MotionEvent.ACTION_DOWN:
-                path.moveTo(xPos, yPos);
-                return true;
+                path.moveTo(event.getX(), event.getY());
+                break;
             case MotionEvent.ACTION_MOVE:
-                path.lineTo(xPos, yPos);
+                path.lineTo(event.getX(), event.getY());
                 break;
             case MotionEvent.ACTION_UP:
+                int x = (int) event.getX();
+                int y = (int) event.getY();
+                if((x>=10&&x<=110) && (y>=10&&y<=120)){
+                    path.reset();
+                }
                 break;
-            default: return false;
 
         }
+        invalidate();
         return true;
     }
 }
