@@ -33,8 +33,6 @@
         android:id="@+id/linear2"
         android:layout_below="@+id/linear1"
         android:background="@color/colorAccent"
-        android:orientation="vertical"
-        android:clickable="true"
-        android:focusable="true" />
+        android:orientation="vertical" />
 
 </RelativeLayout>

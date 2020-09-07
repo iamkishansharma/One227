@@ -13,7 +13,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
 import androidx.annotation.RequiresApi;
-
+//TODO::Background Thread has to be used to run this
 class SurfaceHolderDemo extends SurfaceView {
     Bitmap bg, mario;
     Paint paint;

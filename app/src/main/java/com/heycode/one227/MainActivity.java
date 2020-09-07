@@ -47,16 +47,14 @@ public class MainActivity extends AppCompatActivity {
 
         //Setting View in LinearLayout2
         mSurfaceViewDesign = new SurfaceViewDesign(MainActivity.this);
-        //Touch event listener on LL2
-        mLinearLayout.addView(mSurfaceViewDesign);
-        mLinearLayout.setOnTouchListener(new View.OnTouchListener() {
+        mSurfaceViewDesign.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 if(view instanceof SurfaceView){
                     float x = view.getX();
                     float y = view.getY();
-                    mSurfaceViewDesign.setCircleX(x);
-                    mSurfaceViewDesign.setCircleY(y);
+                    mSurfaceViewDesign.setrcX(x);
+                    mSurfaceViewDesign.setrcY(y);
                     if(ball){
                         Paint pp = new Paint();
                         pp.setColor(Color.WHITE);
@@ -76,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        mLinearLayout.addView(mSurfaceViewDesign);
     }
 
     @Override
@@ -89,10 +89,12 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.cc:
                 startActivity(new Intent(MainActivity.this,MainActivity2.class));
-                //TODO:: call one
+                //This is a transition
+                overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_in_left);
                 break;
             case R.id.ccwi:
                 //Todo::
+                startActivity(new Intent(MainActivity.this, TransitionSceneDemo.class));
                 break;
             default:return false;
         }
