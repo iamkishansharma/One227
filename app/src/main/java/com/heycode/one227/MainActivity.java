@@ -96,6 +96,9 @@ public class MainActivity extends AppCompatActivity {
                 //Todo::
                 startActivity(new Intent(MainActivity.this, TransitionSceneDemo.class));
                 break;
+            case R.id.ccoa:
+                startActivity(new Intent(MainActivity.this, ShowObjAnimation.class));
+                break;
             default:return false;
         }
         return true;

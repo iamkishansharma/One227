@@ -6,4 +6,7 @@
     <item
         android:id="@+id/ccwi"
         android:title="Goto CustomView with Image"/>
+    <item
+        android:id="@+id/ccoa"
+        android:title="Goto Animate Obj of CustomView"/>
 </menu>
