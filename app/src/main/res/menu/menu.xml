@@ -9,4 +9,10 @@
     <item
         android:id="@+id/ccoa"
         android:title="Goto Animate Obj of CustomView"/>
+    <item
+        android:id="@+id/googleMap"
+        android:title="Google Maps"/>
+    <item
+        android:id="@+id/googleMapAddress"
+        android:title="Google Address"/>
 </menu>

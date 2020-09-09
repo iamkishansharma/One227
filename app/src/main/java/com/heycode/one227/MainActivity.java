@@ -99,6 +99,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.ccoa:
                 startActivity(new Intent(MainActivity.this, ShowObjAnimation.class));
                 break;
+            case R.id.googleMap:
+                startActivity(new Intent(MainActivity.this, GoogleMapsActivity.class));
+                break;
+            case R.id.googleMapAddress:
+                startActivity(new Intent(MainActivity.this, ReadableAdd.class));
+                break;
             default:return false;
         }
         return true;
