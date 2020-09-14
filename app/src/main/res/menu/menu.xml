@@ -15,4 +15,7 @@
     <item
         android:id="@+id/googleMapAddress"
         android:title="Google Address"/>
+    <item
+        android:id="@+id/googleMapPlaces"
+        android:title="GoogleMap Places"/>
 </menu>

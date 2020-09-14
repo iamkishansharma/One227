@@ -105,6 +105,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.googleMapAddress:
                 startActivity(new Intent(MainActivity.this, ReadableAdd.class));
                 break;
+            case R.id.googleMapPlaces:
+                startActivity(new Intent(MainActivity.this, GoogleTopTenPlaces.class));
+                break;
             default:return false;
         }
         return true;
