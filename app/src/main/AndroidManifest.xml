@@ -8,6 +8,14 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.Hardware.sensor.proximeter" />
+
+    <uses-feature
+        android:name="android.Hardware.sensor.accelerometer"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.gyroscope"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -16,7 +24,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GoogleTopTenPlaces"></activity>
+        <activity android:name=".sensorex.GyroscopeActivity"></activity>
+        <activity android:name=".sensorex.SensorActivity" />
+        <activity android:name=".GoogleTopTenPlaces" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

@@ -16,6 +16,9 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.heycode.one227.sensorex.GyroscopeActivity;
+import com.heycode.one227.sensorex.SensorActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     Button btnCir, btnRect;
@@ -107,6 +110,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.googleMapPlaces:
                 startActivity(new Intent(MainActivity.this, GoogleTopTenPlaces.class));
+                break;
+            case R.id.accelerometerSensors:
+                startActivity(new Intent(MainActivity.this, SensorActivity.class));
+                break;
+            case R.id.gyroscopeSensors:
+                startActivity(new Intent(MainActivity.this, GyroscopeActivity.class));
                 break;
             default:return false;
         }
