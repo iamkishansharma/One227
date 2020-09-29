@@ -8,13 +8,19 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.Hardware.sensor.proximeter" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.hardware.sensor.proximity" />
+
+    <uses-feature android:name="android.hardware.sensor.light"/>
 
     <uses-feature
         android:name="android.Hardware.sensor.accelerometer"
         android:required="true" />
     <uses-feature
         android:name="android.hardware.sensor.gyroscope"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.compass"
         android:required="true" />
 
     <application
@@ -24,7 +30,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".sensorex.GyroscopeActivity"></activity>
+        <activity android:name=".sensorex.LightSensorDemo"></activity>
+        <activity android:name=".sensorex.ProximityDemo" />
+        <activity android:name=".sensorex.MagnetometerDemo" />
+        <activity android:name=".RotatableBall" />
+        <activity android:name=".sensorex.GyroscopeActivity" />
         <activity android:name=".sensorex.SensorActivity" />
         <activity android:name=".GoogleTopTenPlaces" />
         <!--

@@ -24,4 +24,16 @@
     <item
         android:id="@+id/gyroscopeSensors"
         android:title="GyroScope Sensors"/>
+    <item
+        android:id="@+id/rotatableBall"
+        android:title="Rotatable Ball"/>
+    <item
+        android:id="@+id/magnetoMeter"
+        android:title="Magneto Meter (compass)"/>
+    <item
+        android:id="@+id/proximitySensor"
+        android:title="Proximity (FrontSensor)"/>
+    <item
+        android:id="@+id/lightSensor"
+        android:title="Light Sensor"/>
 </menu>

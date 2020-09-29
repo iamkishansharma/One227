@@ -17,6 +17,9 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.heycode.one227.sensorex.GyroscopeActivity;
+import com.heycode.one227.sensorex.LightSensorDemo;
+import com.heycode.one227.sensorex.MagnetometerDemo;
+import com.heycode.one227.sensorex.ProximityDemo;
 import com.heycode.one227.sensorex.SensorActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -116,6 +119,18 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.gyroscopeSensors:
                 startActivity(new Intent(MainActivity.this, GyroscopeActivity.class));
+                break;
+            case R.id.rotatableBall:
+                startActivity(new Intent(MainActivity.this, RotatableBall.class));
+                break;
+            case R.id.magnetoMeter:
+                startActivity(new Intent(MainActivity.this, MagnetometerDemo.class));
+                break;
+            case R.id.proximitySensor:
+                startActivity(new Intent(MainActivity.this, ProximityDemo.class));
+                break;
+            case R.id.lightSensor:
+                startActivity(new Intent(MainActivity.this, LightSensorDemo.class));
                 break;
             default:return false;
         }
