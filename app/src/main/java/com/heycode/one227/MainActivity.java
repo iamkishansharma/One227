@@ -20,6 +20,7 @@ import com.heycode.one227.sensorex.GyroscopeActivity;
 import com.heycode.one227.sensorex.LightSensorDemo;
 import com.heycode.one227.sensorex.MagnetometerDemo;
 import com.heycode.one227.sensorex.ProximityDemo;
+import com.heycode.one227.sensorex.RotatableBall;
 import com.heycode.one227.sensorex.SensorActivity;
 
 public class MainActivity extends AppCompatActivity {

@@ -34,10 +34,10 @@ public class LightSensorDemo extends AppCompatActivity {
         sel = new SensorEventListener() {
             @Override
             public void onSensorChanged(SensorEvent sensorEvent) {
-                float max = light.getMaximumRange();
-                float v = sensorEvent.values[0];
-                int newVal = (int)(255f*v/max);
-                root.setBackgroundColor(Color.rgb(newVal, newVal, newVal));
+                int grayShade = (int) sensorEvent.values[0];
+                if (grayShade > 255) grayShade = 255;
+//                mTextView.setBackgroundColor(Color.rgb(255 - grayShade, 255 - grayShade, 255 - grayShade));
+                root.setBackgroundColor(Color.rgb(grayShade, grayShade, grayShade));
             }
 
             @Override

@@ -33,7 +33,7 @@
         <activity android:name=".sensorex.LightSensorDemo"></activity>
         <activity android:name=".sensorex.ProximityDemo" />
         <activity android:name=".sensorex.MagnetometerDemo" />
-        <activity android:name=".RotatableBall" />
+        <activity android:name=".sensorex.RotatableBall" />
         <activity android:name=".sensorex.GyroscopeActivity" />
         <activity android:name=".sensorex.SensorActivity" />
         <activity android:name=".GoogleTopTenPlaces" />

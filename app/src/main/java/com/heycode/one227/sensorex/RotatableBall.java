@@ -1,4 +1,4 @@
-package com.heycode.one227;
+package com.heycode.one227.sensorex;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +13,8 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.View;
 
+import com.heycode.one227.R;
+
 public class RotatableBall extends AppCompatActivity implements SensorEventListener
 {
     SensorManager sm;
@@ -26,9 +28,9 @@ public class RotatableBall extends AppCompatActivity implements SensorEventListe
         db=new DrawBall(this);
         setContentView(db);
     }
+
     @Override
-    public void onSensorChanged(SensorEvent event)
-    {
+    public void onSensorChanged(SensorEvent event) {
         if(event.sensor.getType()==Sensor.TYPE_ACCELEROMETER)
         {
             x=(int)Math.pow(event.values[1],3);
@@ -58,7 +60,7 @@ public class RotatableBall extends AppCompatActivity implements SensorEventListe
 
         public DrawBall(Context context) {
             super(context);
-            Bitmap ball= BitmapFactory.decodeResource(getResources(),R.drawable.bg2);
+            Bitmap ball= BitmapFactory.decodeResource(getResources(), R.drawable.bg2);
 //            Bitmap ball = BitmapFactory.decodeResource(getResources(), R.drawable.ic_sports);
             final int dWidth=200;
             final int dheight=200;
